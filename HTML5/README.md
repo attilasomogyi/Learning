@@ -1,5 +1,5 @@
 # Example HTML5 page
-## Favicon
+## [Favicon](https://en.wikipedia.org/wiki/Favicon)
 | File Type |  Image Size |
 | ---- | ---- |
 | PNG | 16x16 and 32x32 |
