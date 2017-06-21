@@ -1,4 +1,5 @@
-# [HTML 5.1](https://www.w3.org/TR/html51/)
+# [HTML 5.2](https://www.w3.org/TR/html51/)
+# [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/)
 ## Validate HTML5 file with [w3 validator](https://validator.w3.org/) or [tidy](https://github.com/htacg/tidy-html5)
 `tidy -errors -quiet filename.html`
 ## [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
