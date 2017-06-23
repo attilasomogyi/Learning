@@ -33,7 +33,7 @@ function getShortCutPrefix() {
     if (isFirefox.test(navigator.userAgent)) {
         return "Alt+Shift+";
     } else {
-        return"Alt+";
+        return "Alt+";
     }
 }
 
