@@ -1,23 +1,204 @@
 <!DOCTYPE html> <!-- HTML5 document declaration -->
 <html lang="en">  <!-- The root element of English Language HTML page -->
-    <head>  <!-- Contains meta information about the HTML5 document -->
-        <title>The title of HTML5 document</title>
-        <meta charset="utf-8">  <!-- Specify the character encoding for the HTML document -->
-        <meta name="author" content="Attila Somogyi">   <!-- The name of the page's authors -->
-        <meta name="description" content="Description of HTML page">
-        <meta name="generator" content="Program name and version">
-        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="favicon.ico"/> <!-- Located in the website's root -->
-    </head>
-    <body>  <!-- Contains the visible page content -->
-        <!-- Comment -->
+  <head>  <!-- Contains meta information about the HTML5 document -->
+    <meta charset="utf-8">  <!-- Specify the character encoding for the HTML document -->
+    <title>The title of HTML5 document</title>
+    <meta name="author" content="Attila Somogyi">   <!-- The name of the page's authors -->
+    <meta name="description" content="Description of HTML page">
+    <meta name="generator" content="Program name and version">
+    <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico"/> <!-- Located in the website's root -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/javascript.js"></script>
+  </head>
+  <body>  <!-- Contains the visible page content -->
+    <header>
+      <h1>Header</h1>
+      <h2 id="navigation">Navigation</h2>
+      <nav>
+        <ul>
+          <li><a href="https://github.com" tabindex="1" target="_self">target="_self" opens the link in same tab (This is default)</a></li>
+          <li><a href="https://github.com" tabindex="2" target="_blank">target="_blank" opens the link in a new tab</a></li>
+          <li><a href="https://github.com" tabindex="3" target="_parent">target="_parent" opens the link in the parent frame</a></li>
+          <li><a href="https://github.com" tabindex="4" target="_top">target="_top" opens the link in full body of the window</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr>
+    <main>
+      <!-- Comment -->
+      <article>
+        <header>
+          <h1>Global attributes</h1>
+        </header>
+        <section>
+          <h2>Access key</h2>
+          <p>Access key in Firefox is Alt+Shift+key and in other browsers are Alt+key.</p>
+          <p>
+            <script>writeShortCut("g");</script>
+            <a accesskey="g" href="https://www.w3.org/TR/html52/dom.html#global-attributes">Link</a>
+          </p>
+          <p>
+            <script>writeShortCut("b");</script>
+            <button accesskey="b" onclick="button(this)">Button</button>
+          </p>
+          <p>
+            <script>writeShortCut("i");</script>
+            Input <input accesskey="i" type="text"/>
+          </p>
+          <p>
+            <script>writeShortCut("t");</script>
+            Text Area <textarea accesskey="t"></textarea>
+          </p>
+          <p>
+            <script>writeShortCut("l");</script>
+            <label accesskey="l" for="label">Label</label>
+            <input id="label" type="radio">
+          </p>
+          <fieldset>
+            <script>writeShortCut("e");</script>
+            <legend accesskey="e">Legend</legend>
+            Input1 <input type="text"><br>
+            Input2 <input type="text"><br>
+          </fieldset>
+        </section>
+        <section>
+          <h2>Content editable</h2>
+          <p contenteditable="true">Editable paragraph.</p>
+          <p contenteditable="false">Not editable paragraph.</p>
+        </section>
+        <section>
+          <h2>Context menu</h2>
+          <p contextmenu="menu-name">Right click this paragraph and see the context menu.</p>
+          <menu type="context" id="menu-name">
+            <menuitem label="Menu 1"></menuitem>
+            <menu label="Menu 2">
+              <menuitem label="Sub menu 1"></menuitem>
+              <menuitem label="Sub menu 2"></menuitem>
+            </menu>
+            <menu label="Menu 3">
+              <menuitem label="Sub menu 1"></menuitem>
+              <menu label="Sub menu 2">
+                <menuitem label="Sub sub menu 1"></menuitem>
+              </menu>
+            </menu>
+          </menu>
+        </section>
+        <section>
+          <h2>Dir</h2>
+          <p dir="ltr">Text left to right</p>
+          <p dir="rtl">Text right to left</p>
+        </section>
+        <section>
+          <h2>Draggable</h2>
+          <div class="box" ondrop="drop(event)" ondragover="dragOver(event)">
+            <p draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" id="draggable-text">Draggable text.</p>
+          </div>
+          <div class="box" ondrop="drop(event)" ondragover="dragOver(event)">
+          </div>
+          <div class="clear"></div>
+        </section>
+        <section>
+          <h2>Hidden</h2>
+          <label for="search">Search</label>
+          <input id="search" type="search" name="search" aria-describedby="search-help">
+          <p id="search-help" hidden>Search on this site.</p>
+        </section>
+        <section>
+          <h2>Lang</h2>
+          <p lang="en">English Text</p>
+          <p lang="de">Englischer Text</p>
+          <p lang="la">Anglicus illud</p>
+        </section>
+        <section>
+          <h2>Spell check</h2>
+          <p contenteditable="true" spellcheck="True">Englih Text</p>
+          <label for="spell-check">Spell Check</label>
+          <input id="spell-spell" name="input" type="text" spellcheck="true">
+        </section>
+        <section>
+          <h2 style="color:green">Style</h2>
+          <p style="background-color:yellow;color:red;font-weight:bold;">Red bold text</p>
+        </section>
+        <section>
+          <h2>Tab index</h2>
+          <a href="#navigation">Tab index on navigation</a>
+        </section>
+        <section>
+          <h2>Title</h2>
+          <p title="Title">Tooltip text for an element.</p>
+        </section>
+        <section>
+          <h2>Translate</h2>
+          <p translate="no">Don't translate this!</p>
+          <p>This can be translated to any language.</p>
+        </section>
+      </article>
+      <section>
+        <h1 id="headers">Headers</h1>
         <h1>Header One</h1> <!-- Header element -->
         <h2>Header Two</h2>
         <h3>Header Three</h3>
         <h4>Header Four</h4>
         <h5>Header Five</h5>
         <h6>Header Six</h6>
+      </section>
+      <section>
+        <h1>Paragraph</h1>
         <p>Paragraph</p> <!-- Paragraph element -->
-    </body>
+      </section>
+      <section>
+        <h1>Image as Link</h1>
+        <a href="https://www.w3.org/">
+          <img src="images/html5-logo.svg" alt="Alternate text for image"> <!-- Define an image. Required two attributes: src and alt -->
+        </a><br>
+      </section>
+      <section>
+        <h1>Image Maps</h1>
+        <img src="images/html5-logo.svg" alt="Alternate text for image" usemap="#html5-logo"> <!-- Define an image. Required two attributes: src and alt -->
+        <map name="html5-logo">
+          <area accesskey="w" shape="rect" coords="0,0,320,50" alt="W3C" href="https://www.w3.org">
+          <area accesskey="h" shape="circle" coords="160,160,100" alt="HTML5" href="https://en.wikipedia.org/wiki/HTML5">
+        </map>
+      </section>
+      <section>
+        <h1>Text-level semantics</h1>
+        <a href="#headers">Headers</a>
+        <em>Emphasized text</em><br>
+        <strong>Important text</strong><br>
+        <small>Small text</small><br>
+        <b>Bold</b><br>
+        <i>Italic text</i><br>
+        <mark>Marked text</mark><br>
+        <del>Delete text</del><br>
+        <ins>Insert text</ins><br>
+        <sub>Subscript text</sub><br>
+        <sup>Superscript text</sup><br>
+      </section>
+      <aside>
+        <h2>Aside header</h2>
+        <p>Aside</p>
+      </aside>
+      <article>
+        <header>
+          <h2>Article header</h2>
+        </header>
+        <section>
+          <h2>Section</h2>
+        </section>
+        <footer>
+          <h2>Footer</h2>
+        </footer>
+      </article>
+    </main>
+    <hr>
+    <footer>
+      <address>
+        Detail, contact
+        <a href="mailto:username@domain">Author</a>
+      </address>
+      <p><small>Copyright Year Company name</small></p>
+    </footer>
+  </body>
 </html>
